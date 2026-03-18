@@ -15,11 +15,16 @@ const Counter: React.FC<CounterProps> = ({ initialValue = 0 }) => {
     setCount((prev) => prev - 1);
   };
 
+  const clear = () => {
+    setCount(0);
+  };
+
   return (
     <div style={{ padding: '20px' }}>
       <h2>Counter: {count}</h2>
       <button onClick={increment}>+</button>
       <button onClick={decrement}>-</button>
+      <button onClick={clear}>Clear</button>
     </div>
   );
 };
